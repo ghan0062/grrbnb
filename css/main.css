@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+*::after,
+*::before {
+	box-sizing: inherit;
+}
+
+html {
+	font-size: 20px;
+	line-height: 1.5;
+	font-family: Roboto, Helvetica, Arial, sans-serif;
+}
+
+main {
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid #aaa;
+
+}
+
+
+input#min.price::after {
+	content: "$"attr(data-price);
+	display: block;
+	margin-top: -1.5rem;
+}
+
+input.price#max::after {
+	content: "$"attr(data-price);
+	display: block;
+	margin-top: -1.5rem;
+}
+
+header {
+	background-image: url(../img/diego-passadori-637084-unsplash.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	min-height: 200px;
+}
+
+
+h1 {
+	display: flex;
+	margin: 0
+}
+
+
+div.form-box.place {
+	display: flex;
+	flex-direction: column;
+
+}
+
+input#city {
+	margin: 0px 8px;
+	padding: 4px;
+	font-size: 0.694em;
+}
+
+
+div.form-box.check-in {
+	display: flex;
+	flex-direction: column;
+
+}
+
+input#check-in {
+	margin: 0px 8px;
+	padding: 4px;
+	font-size: 0.694em;
+}
+
+div.form-box.check-out {
+	display: flex;
+	flex-direction: column;
+}
+
+input#check-out {
+	margin: 0px 8px;
+	padding: 4px;
+	font-size: 0.694em;
+}
+
+div.form-box.min-price {
+	display: flex;
+	flex-direction: column;
+}
+
+input#min.price {
+	margin: 0px 8px;
+	padding: 4px;
+	font-size: 0.694em;
+}
+
+div.form-box.max-price {
+	display: flex;
+	flex-direction: column;
+}
+
+input#max.price {
+	margin: 0px 8px;
+	padding: 4px;
+	font-size: 0.694em;
+}
+
+div.form-box.dogs {
+	display: flex;
+	flex-direction: column;
+}
+
+input#num-dogs {
+	margin: 0px 8px;
+	padding: 4px;
+	font-size: 0.694em;
+	;
+}
+
+button.search-btn {
+	padding: 4px 16px;
+	margin: 28px 8px 40px;
+	background-color: hsl(41, 79%, 78%);
+	font-size: 14px;
+	color: hsl(355, 71%, 7%);
+}
+
+span {
+	color: hsl(355, 71%, 7%);
+	text-shadow: 3px 3px hsl(41, 79%, 78%);
+	font-size: 1em;
+
+}
+
+span:first-child {
+	}
+
+span:last-child {
+	margin-right: 0.5rem;
+}
+
+label {
+	margin: 0px 8px;
+	padding-top: 8px;
+	font-size: 0.833em;
+	color: hsl(355, 71%, 7%);
+
+}
+
+img {
+	position: relative;
+	width: 50px;
+	height: 50px;
+	margin:0.5rem auto 0rem 0.5rem;
+
+}
+
+@media (min-width: 600px) and (max-width:999px) {
+
+	form {
+
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+			"a a"
+			"b c"
+			"d e"
+			"f g"
+	}
+
+	div.form-box.place {
+		grid-area: a;
+	}
+
+	div.form-box.check-in {
+
+		grid-area: b;
+
+
+	}
+
+	div.form-box.check-out {
+		grid-area: c;
+
+	}
+
+
+	div.form-box.min-price {
+		grid-area: d;
+
+	}
+
+	div.form-box.max-price {
+		grid-area: e;
+	}
+
+	input#check-in {
+		width: 100%;
+
+	}
+
+	span {
+		font-size: 1.2em
+	}
+
+	div.form-box.dogs {
+		grid-area: f;
+		width: 100%;
+	}
+
+	input#num-dogs {
+		width: 100%;
+	}
+
+	div.form-box.search {
+
+		grid-area: g;
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	button.search-btn {
+		margin-right: 1.5rem;
+	}
+
+	img {
+		width: 100px;
+		height: 100px;
+	}
+}
+
+@media (min-width: 1000px) {
+
+
+	main {
+		display: grid;
+		grid-template-rows: 1fr;
+		grid-template-areas: "header form";
+	}
+
+	form {
+
+		display: grid;
+		grid-template-rows: 1fr 1fr;
+		grid-template-areas:
+			"a a"
+			"b c"
+			"d e"
+			"f g"
+	}
+
+	div.form-box.place {
+		grid-area: a;
+		width: 100%;
+	}
+
+	div.form-box.check-in {
+
+		grid-area: b;
+		width: 100%;
+
+	}
+
+	div.form-box.check-out {
+		grid-area: c;
+		width: 100%;
+
+	}
+
+
+	div.form-box.min-price {
+		grid-area: d;
+
+	}
+
+	div.form-box.max-price {
+		grid-area: e;
+	}
+
+	
+
+	input#check-in {
+		width: 100%;
+
+	}
+
+
+	div.form-box.dogs {
+		grid-area: f;
+		width: 100%;
+	}
+
+	input#num-dogs {
+		width: 100%;
+	}
+
+	button.search-btn {
+		margin-right: 1.5rem;
+
+	}
+
+	div.form-box.search {
+		grid-area: g;
+		display: flex;
+		flex-direction: row-reverse;
+	}
+
+	span {
+		color: hsl(355, 71%, 7%);
+		text-shadow: 3px 3px hsl(41, 79%, 78%);
+		font-size: 1.44em;
+	}
+
+}
